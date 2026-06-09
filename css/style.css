@@ -1,6 +1,11 @@
-.headerr{
+header{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
+}
+
+.card{
+    display: block;
+    margin: 50px;
 }

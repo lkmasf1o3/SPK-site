@@ -77,9 +77,29 @@ nav ul li {
     margin-right: 20px;
 }
 
+.nav-list a.active {
+    color: #0f13f1;
+    border-bottom: 2px solid #260ff1;
+    padding-bottom: 5px;
+}
+
+
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+nav ul li:first-child a {
+    font-weight: bold;
+}
+
+nav ul li:last-child a {
+    color: #f1c40f;
+}
+
+nav ul li:nth-child(even) a:hover {
+    color: #f39c12;
+}
+
 
 /* Кнопка */
 
@@ -93,7 +113,7 @@ nav ul li a:hover {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    transition: all 0.3s;
+    transition: all 0.25s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -103,6 +123,11 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+.btn:active, button:active, .button:active {
+    transform: scale(0.97); 
+}
+
+
 /* Карточки товаров/услуг  */
 .product-card{
     background-color: #f9f9f9;
@@ -111,19 +136,38 @@ nav ul li a:hover {
     padding: 15px;
     margin-bottom: 20px;
     text-align: center;
-    transition: box-shadow 0.3s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.product-card:hover{
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.product-card:nth-child(odd) {
+    background-color: #ffffff;
 }
+
+.product-card:nth-child(even) {
+    background-color: #fafafa;
+}
+
+
+.product-card:hover {
+    background: linear-gradient(to bottom, #ffffff, #fafafa);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
 
 .card-img{
     background-color: #e0e0e0;
     height: 150px;
     border-radius: 5px;
     margin-bottom: 10px;
+    transition: transform 0.3s;
+    overflow: hidden;
 }
+
+.product-card:hover .card-img {
+    transform: scale(1.02);
+}
+
 
 .card-full{
     background-color: #e0e0e0;
@@ -168,6 +212,7 @@ footer{
     color: #6e94ce;
     padding: 40px 20px 25px;
     margin-top: 50px;
+    background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
 }
 
 .footer-col{
@@ -182,11 +227,18 @@ footer{
 footer a {
     color: #ecf0f1;
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 footer a:hover{
     text-decoration: underline;
+    color: #7a9ed3;
 }
+
+footer a:active {
+    color: #4622e6;
+}
+
 
 .copyright{
     text-align: center;
@@ -243,10 +295,11 @@ input, textarea, select{
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input:focus, textarea:focus, select:focus{
+input:focus, textarea:focus, select:focus {
     outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    border-color: #e67e22;
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+    background-color: #fffef7;
 }
 
 .container{
@@ -258,8 +311,26 @@ input:focus, textarea:focus, select:focus{
 section{
     margin-top: 40px;
     margin-bottom: 40px;
+    transition: opacity 0.5s;
 }
 
 .hero {
-    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%), url('https://via.placeholder.com/1920x600?text=Hero+Background');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero h1, .hero p {
+    color: white;
+}
+
+.hero .btn {
+    background-color: #e67e22;
+}
+
+.hero .btn:hover {
+    background-color: #d35400;
 }

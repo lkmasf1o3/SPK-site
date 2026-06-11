@@ -215,6 +215,10 @@ footer{
     background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
 }
 
+footer h4{
+    color: #ffffff;
+}
+
 .footer-col{
     margin-bottom: 20px;
 }

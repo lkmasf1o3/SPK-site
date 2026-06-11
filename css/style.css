@@ -272,8 +272,6 @@ footer a:active {
     width: 100%;
     border: 1px solid #dddddd;
     border-radius: 8px;
-    position: relative;
-    overflow: hidden;
 }
 
 /* Форма обратной связи  */

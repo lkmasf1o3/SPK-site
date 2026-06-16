@@ -52,7 +52,7 @@ h4{
 /* Шапка сайта */
 
 header {
-    background-color: #2d4f70;
+    background: linear-gradient(160deg, #4da7fc 0%, #3123f7 50%, #4da7fc 100%);
     padding: 15px 20px;
     position: sticky;
     top: 0;
@@ -113,8 +113,14 @@ nav ul li a:hover{
     font-size: 16px;
     transition: all 0.25s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    cursor: pointer;
 }
 
+.card-content .btn, .card-content button, .card-content .button {
+    width: 30%;
+    align-self: center;
+}
 
 .btn:hover, button:hover, .button:hover{
     background-color: #2980b9;
@@ -129,8 +135,7 @@ nav ul li a:hover{
 /* Карточки товаров/услуг  */
 .product-card{
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    flex-direction: row;
     background-color: #f9f9f9;
     border: 1px solid #dddddd;
     border-radius: 8px;
@@ -138,6 +143,7 @@ nav ul li a:hover{
     margin-bottom: 20px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    gap: 10px;
 }
 
 .product-card .card-content {
@@ -190,14 +196,20 @@ nav ul li a:hover{
     margin: 10px 0;
 }
 
+.card-content p{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
 /* Преимущества */
 
 .features-grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
 }
+
 
 .feature-card {
     flex: 1;
@@ -334,7 +346,9 @@ section{
 }
 
 .hero {
-    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%), url('https://via.placeholder.com/1920x600?text=Hero+Background');
+
+    background-image: linear-gradient(135deg, #222d8f33 0%, #4034e4c2 100%), url('../img/4529_big_5018.webp');
+    background-repeat: repeat;
     background-size: cover;
     background-position: center;
     padding: 80px 0;

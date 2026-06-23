@@ -8,21 +8,23 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <a class="logo" href="index.html">Кинотеатр "Антракт"</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalogue.html">Каталог</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                    <li><a href="feedback.html">Обратная связь</a></li>
-                </ul>
-            </nav>
-        </div>
+        <section class="sidebar-section">
+            <div class="container">
+                <a class="logo" href="index.html">Кинотеатр "Антракт"</a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalogue.html">Каталог</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="feedback.html">Обратная связь</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
     </header>
 
-    <main>
-        <section>
+    <main class="page-layout">
+        <section class="hero-section">
             <div class="hero">
                 <h1>Добро пожаловать в лучший кинотеатр!</h1>
                 <p>Наши кинотеатры работают по всей Российской Федерации, мы так-же предоставляем сервисы "Онлайн-стриминга", всё для вашего комфорта и просмотра любимых сериалов и кино!</p>
@@ -30,8 +32,8 @@
             </div>
         </section>
 
-        <section class="features-grid">
-            <div class="prev">
+        <section class="features-section">
+            <div class="features-grid">
                 <div class="feature-card">
                     <h2>Почему выбирают нас</h2>
                     <div>
@@ -59,10 +61,10 @@
                 </div>
             </div>
         </section>
-
-        <section class="features-grid">
-            <div>
-                <h2>Популярное в этом месяце</h2>
+        
+        <section class="popular-section">
+            <h2>Популярное в этом месяце</h2>
+            <div class="features-grid">
                 <div class="product-card">
                     <div class="feature-card">
                         <div></div>
@@ -105,9 +107,9 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <section class="gallery-section">
             <div class="container">
-                <h2 class="section-title">Галерея работ</h2>
+                <h2 class="section-title">Афиша фильмов</h2>
                 <div class="gallery-grid">
                     <div class="gallery-item gallery-item-1"><img src="img/images.jpg" alt=""></div>
                     <div class="gallery-item gallery-item-2"><img src="img/220x330.webp" alt=""></div>
@@ -119,6 +121,36 @@
             </div>
         </section>
         
+        <section class="reviews">
+            <div class="container">
+                <h2>Отзывы наших зрителей</h2>
+                <div class="reviews-grid">
+                    
+                    <div class="review-card">
+                        <div class="review-photo">
+                            <img src="img/user1.jpg" alt="Клиент">
+                        </div>
+                        <div class="review-rating">★★★★★</div>
+                        <div class="review-text">
+                            <p><strong>Александр И.</strong></p>
+                            <p>Прекрасный кинотеатр! Очень удобные кресла и звук просто потрясающий. Теперь смотрю кино только здесь.</p>
+                        </div>
+                    </div>
+        
+                    <div class="review-card">
+                        <div class="review-photo">
+                            <img src="img/user2.jpg" alt="Клиент">
+                        </div>
+                        <div class="review-rating">★★★★☆</div>
+                        <div class="review-text">
+                            <p><strong>Марина В.</strong></p>
+                            <p>Сервис на высоте. Подписка Антракт+ очень выручает, когда нет времени идти в кинотеатр. Качество 4К радует глаз.</p>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -129,13 +161,15 @@
                     <h4>Об Антракте</h4>
                     <p>Сергей Бурунов и Марк Артишоков - создатели "Антракта" придумали, что будет выгоднее и удобнее совместить кинотеатры и стриминги.</p>
                 </div>
-                <div class="social-grid">
-                    <h4>Контакты</h4>
-                    <p>Email: <a href="mailto:antract@kino.ru">antract@kino.ru</a> <br> <br> Телефон: <a href="tel:+78805353535">+7 (880) 535-35-35</a> <br><br> Адрес: ул. Тверская 412, Москва</p>
-                </div>
-                <div class="social-grid">
-                    <h4>Следите за нами</h4>
-                    <p>Соцсети: <a href="vk.ru">VK</a>,<a href="max.ru">MAX</a>,<a href="Rutube.ru">Rutube</a></p>
+                <div class="social-links">
+                    <div class="social-icon">
+                        <h4>Контакты</h4>
+                        <p>Email: <a href="mailto:antract@kino.ru">antract@kino.ru</a> <br> <br> Телефон: <a href="tel:+78805353535">+7 (880) 535-35-35</a> <br><br> Адрес: ул. Тверская 412, Москва</p>
+                    </div>
+                    <div class="social-icon">
+                        <h4>Следите за нами</h4>
+                        <p>Соцсети: <a href="vk.ru">VK</a>,<a href="max.ru">MAX</a>,<a href="Rutube.ru">Rutube</a></p>
+                    </div>
                 </div>
             </div>
         </div>

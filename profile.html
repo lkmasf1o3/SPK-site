@@ -4,23 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Кинотеатр "Антракт"</title>
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <a class="logo" href="index.html">Кинотеатр "Антракт"</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalogue.html">Каталог</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                    <li><a href="feedback.html">Обратная связь</a></li>
-                    <li><a href="signup.html">Зарегистрироваться</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="main-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    Кинотеатр "Антракт"
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalogue.html">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.html">Обратная связь</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Аккаунт
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="signup.html">Зарегистрироваться</a></li>
+                                <li><a class="dropdown-item" href="login.html">Войти</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -38,12 +65,12 @@
                             👤
                         </div>
                     </div>
-                    <h4>Иван Петров</h4>
-                    <p class="text-muted">ivan@example.com</p>
+                    <h4 contenteditable="true">Иван Петров</h4>
+                    <p class="text-muted" contenteditable="true">ivan@example.com</p>
                     <hr>
                     <div class="text-start">
-                        <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
-                        <p><strong>Дата регистрации:</strong> 10.01.2026</p>
+                        <p><strong>Телефон:</strong></p><p contenteditable="true"> +7 (999) 123-45-67</p>
+                        <p><strong>Дата регистрации:</strong></p><p contenteditable="true"> 10.01.2026</p>
                     </div>
                     <a href="login.html" class="btn btn-danger w-100 mt-3">Выйти</a>
                 </div>
@@ -52,50 +79,121 @@
             <!-- Правая колонка: история заказов -->
             <div class="col-md-8">
                 <div class="card shadow-sm p-4">
-                    <h4 class="mb-3">История заказов</h4>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-requests-tab" data-bs-toggle="tab" data-bs-target="#nav-requests" type="button" role="tab" aria-controls="nav-requests" aria-selected="true">Сеансы</button>
+                        <button class="nav-link" id="nav-settings-tab" data-bs-toggle="tab" data-bs-target="#nav-settings" type="button" role="tab" aria-controls="nav-settings" aria-selected="false">Настройки</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Промокоды</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-requests" role="tabpanel" aria-labelledby="nav-requests-tab">
+                            <div>
+            
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>№ билета</th>
+                                                <th>Дата</th>
+                                                <th>Сумма</th>
+                                                <th>Статус</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>#1001</strong></td>
+                                                <td>15.06.2026</td>
+                                                <td>4 500 ₽</td>
+                                                <td><span class="badge bg-success">Использован</span></td>
+                                                <td><button class="btn btn-sm btn-outline-primary">Подробнее</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>#1002</strong></td>
+                                                <td>12.06.2026</td>
+                                                <td>2 300 ₽</td>
+                                                <td><span class="badge bg-warning text-dark">Возврат</span></td>
+                                                <td><button class="btn btn-sm btn-outline-primary">Подробнее</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>#1003</strong></td>
+                                                <td>05.06.2026</td>
+                                                <td>7 800 ₽</td>
+                                                <td><span class="badge bg-info">Не начат сеанс</span></td>
+                                                <td><button class="btn btn-sm btn-outline-primary">Подробнее</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>#1004</strong></td>
+                                                <td>28.05.2026</td>
+                                                <td>1 200 ₽</td>
+                                                <td><span class="badge bg-danger">Отменён</span></td>
+                                                <td><button class="btn btn-sm btn-outline-primary">Подробнее</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
+                                <form>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchkidmode">
+                                        <label class="form-check-label" for="flexSwitchkidmode">Включить детский режим</label>
+                                      </div>
 
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th>№ заказа</th>
-                                    <th>Дата</th>
-                                    <th>Сумма</th>
-                                    <th>Статус</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>#1001</strong></td>
-                                    <td>15.06.2026</td>
-                                    <td>4 500 ₽</td>
-                                    <td><span class="badge bg-success">Выполнен</span></td>
-                                    <td><button class="btn btn-sm btn-outline-primary">Подробнее</button></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>#1002</strong></td>
-                                    <td>12.06.2026</td>
-                                    <td>2 300 ₽</td>
-                                    <td><span class="badge bg-warning text-dark">В обработке</span></td>
-                                    <td><button class="btn btn-sm btn-outline-primary">Подробнее</button></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>#1003</strong></td>
-                                    <td>05.06.2026</td>
-                                    <td>7 800 ₽</td>
-                                    <td><span class="badge bg-info">Доставлен</span></td>
-                                    <td><button class="btn btn-sm btn-outline-primary">Подробнее</button></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>#1004</strong></td>
-                                    <td>28.05.2026</td>
-                                    <td>1 200 ₽</td>
-                                    <td><span class="badge bg-danger">Отменён</span></td>
-                                    <td><button class="btn btn-sm btn-outline-primary">Подробнее</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    <div>
+                                        <label class="form-label">Выберите возрастной рейтинг предлагаемых фильмов:</label>
+                                        <select class="form-select" aria-label="Возрастной рейтинг">
+                                            <option selected value="18">18+</option>
+                                            <option valuse="16">16+</option>
+                                            <option value="12">12+</option>
+                                            <option value="6">6+</option>
+                                            <option value="0">0+</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="seatRange" class="form-label">Выберите желаемое место в ряду:</label>
+                                        <input type="range" class="form-range" min="1" max="12" step="1" id="seatRange">
+                                        
+                                        <div>
+                                            <div class="d-flex justify-content-between text-muted small mt-1">
+                                                <span class="for-range">1</span>
+                                                <span class="for-range">2</span>
+                                                <span class="for-range">3</span>
+                                                <span class="for-range">4</span>
+                                                <span class="for-range">5</span>
+                                                <span class="for-range">6</span>
+                                                <span class="for-range">7</span>
+                                                <span class="for-range">8</span>
+                                                <span class="for-range">9</span>
+                                                <span class="for-range">10</span>
+                                                <span class="for-range">11</span>
+                                                <span class="for-range">12</span>
+                                              </div>
+                                        </div>
+                                      </div>
+
+                                </form>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <form>
+                            <div>
+                                <label class="form-label">Активировать доступные промокоды:</label>
+                                <select class="form-select" aria-label="promo">
+                                    <option selected value="NEWFRAME">ПЕРВЫЙКАДР - СКИДКА 10% НА ПОКУПКИ В КИНОБАРЕ</option>
+                                    <option valuse="PREMIER">ПРЕМЬЕРА - СКИДКА 20% НА НОВИНКИ</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Ввести новый промокод" aria-label="Ввести новый промокод" aria-describedby="button-addon2">
+                            </div>
+
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Активировать</button>
+                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,5 +228,6 @@
             <p>&copy; 2026 Все права защищены. Учебный проект.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

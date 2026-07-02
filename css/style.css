@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "NotoSerif";
+    src: url(/fonts/NotoSerif-VariableFont_wdth\,wght.ttf);
     font-size: 16px;
     color: #333333;
     background-color: #ffffff;
@@ -218,7 +219,7 @@ nav ul li a:hover{
 /* Подвал */
 
 footer {
-    background: linear-gradient(135deg, #475d72 0%, #006fdf 100%);
+    background: linear-gradient(135deg, #475d72 0%, #3123f7 100%);
     padding: 40px 20px 25px;
     margin-top: 50px;
 }
@@ -1048,6 +1049,7 @@ form {
     font-weight: 700;
     color: white ;
     text-decoration: none;
+    margin-left: 10px;
 }
 
 
@@ -1109,4 +1111,229 @@ form {
 
 .dropdown-item {
     color: white;
+}
+
+
+.calculator-section {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-section {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-section {
+    grid-column: 1 / -1;
+    justify-content: center;
+}
+
+
+.calculator-container {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.result p {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+#finalPrice {
+    font-weight: bold;
+    font-size: 24px;
+    color: #e67e22;
+}
+
+#discountAmount {
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Контейнер карточки */
+.flip-card {
+    background-color: transparent;
+    height: 380px;
+    perspective: 1000px;  /* Создаёт 3D-эффект */
+    cursor: pointer;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Внутренний блок, который вращается */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Переворот при наведении (CSS-версия) */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Если используется класс flipped (для клика) */
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Передняя и задняя стороны карточки */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;  /* Скрываем обратную сторону */
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.flip-card-front {
+    background: white;
+}
+
+.flip-card-back {
+    background: #2c3e50;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-icon {
+    font-size: 64px;
+    margin-bottom: 15px;
+}
+
+.flip-card-front h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.flip-card-front p {
+    color: #888;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.flip-card-back h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.flip-card-back p {
+    font-size: 15px;
+    color: #bdc3c7;
+    margin: 5px 0;
+}
+
+.flip-card-btn {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+
+.flip-card-btn:hover {
+    background: #2980b9;
+}
+
+.flip-card .flip-card-inner .flip-card-back h3 {
+    color: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    height: 200px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.gallery-item.show {
+    opacity: 1;
+    transform: translateY(0);
 }
